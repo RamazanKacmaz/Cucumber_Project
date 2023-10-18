@@ -3,6 +3,7 @@ package stepdefinitions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import org.bouncycastle.math.ec.custom.sec.SecT571Field;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import pages.AmazonPage;
@@ -73,6 +74,18 @@ public class AmazonStepdefinitions {
     @Then("arama sonuclarinin {string} icerdigini test eder")
     public void arama_sonuclarinin_icerdigini_test_eder(String arananUrun) {
         String actual = amazonPage.sonucYaziElementi.getText();
+        Assert.assertTrue(actual.contains(arananUrun));
+    }
+
+    @Then("ilk urune tiklar")
+    public void ilk_urune_tiklar() {
+    amazonPage.ilkUrunElementi.click();
+    }
+
+
+    @Then("urun isminin {string} icerdigini test eder")
+    public void urun_isminin_icerdigini_test_eder(String arananUrun) {
+        String actual= amazonPage.ilkUrunIsimElementi.getText();
         Assert.assertTrue(actual.contains(arananUrun));
     }
 }

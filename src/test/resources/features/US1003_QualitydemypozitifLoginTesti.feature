@@ -1,5 +1,5 @@
 Feature: US1003 Kullanici gecerli bilgiler ile sayfaya giris yapar
-  
+  @smoke
   Scenario: TC05 qualtydemypozitif login testi
     Given kullanici "qdUrl" anasayfaya gider
     And ilk login linkine tiklar

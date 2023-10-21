@@ -2,7 +2,7 @@
 
 Feature: US1001 Kullanici amazon anasayfada arama yapar
 
-    @smoke
+
     Scenario: TC01 kullanici amazonda nutella aratir
 
 

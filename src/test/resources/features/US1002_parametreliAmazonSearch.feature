@@ -7,7 +7,7 @@ Feature: US1002 Kullanici parametre olarak yazdigi urunu amazonda aratir
     And 2 saniye bekler
     And sayfayi kaptir
 
-     @smoke
+
     Scenario: TC04 parametre ile apple aratir
       Given kullanici "amazonUrl" anasayfaya gider
       Then arama kutususuna "apple" yazip aratir
